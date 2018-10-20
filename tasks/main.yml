@@ -60,10 +60,6 @@
     - ansible_os_family == 'RedHat'
     - "osquery.version != 'latest'"
 
-- name: test osquery config
-  debug:
-    var: osquery_config
-
 - name: copy config file
   copy:
     dest: "{{ osquery.config_include_dir }}/osquery.conf"
