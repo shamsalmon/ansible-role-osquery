@@ -21,11 +21,6 @@
     state: present
   when: ansible_os_family == 'Debian'
 
-- name: Update apt cache
-  apt:
-    update_cache: true
-  when: ansible_os_family == 'Debian'
-
 - name: Ensure specific version of packages is installed.
   apt:
     name: "osquery={{ osquery.version}}"
