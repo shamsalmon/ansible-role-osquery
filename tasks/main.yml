@@ -7,7 +7,7 @@
       - ca-certificates
     state: present
   when: ansible_os_family == 'Debian'
-  
+
 - name: Add repository key
   apt_key:
     keyserver: "keyserver.ubuntu.com"
