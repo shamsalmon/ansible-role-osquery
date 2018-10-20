@@ -1,6 +1,6 @@
 # Ansible Role: osquery
 
-Ansible Role to install and configure osquery for Ubuntu.
+Ansible Role to install and configure osquery for Redhat / Ubuntu Systems
 
 
 ## Requirements
@@ -9,7 +9,7 @@ None.
 
 ## Role Variables
 
-Available variables are listed below, along with default values (see `defaults/main.yml`).
+Available variables are listed below, along with default values (see `defaults/main`).
 You can overload these values by creating an dictionary called "osquery".
 
 Set the osquery deamon name.
@@ -84,7 +84,7 @@ None.
 
     - hosts: all
       roles:
-        - apolloclark.osquery
+        - ansible-role-osquery
 
 ## License
 
@@ -92,4 +92,4 @@ MIT / BSD
 
 ## Author Information
 
-This role was created in 2017 by [Apollo Clark](https://www.apolloclark.com/)
+This role was originally created in 2017 by [Apollo Clark](https://www.apolloclark.com/) and forked by Sam Shannon @ Flexential Professional Services
