@@ -9,7 +9,7 @@
 
 - name: Add Server repository
   apt_repository:
-    repo: 'deb [arch=amd64] https://osquery-packages.s3.amazonaws.com/{{ ansible_distribution_release }} {{ ansible_distribution_release }} main'
+    repo: 'deb [arch=amd64] https://pkg.osquery.io/deb deb main'
     state: present
   when: ansible_os_family == 'Debian'
 
