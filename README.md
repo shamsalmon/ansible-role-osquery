@@ -2,6 +2,7 @@
 
 Ansible Role to install and configure osquery for Redhat / Ubuntu Systems
 
+[![Build Status](https://travis-ci.org/shamsalmon/ansible-role-osquery.svg?branch=master)](https://travis-ci.org/shamsalmon/ansible-role-osquery)
 
 ## Requirements
 
