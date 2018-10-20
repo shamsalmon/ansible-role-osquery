@@ -5,11 +5,12 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
-def test_svc(host):
-    services = [
+def test_service(Service):
+    present = [
         "osqueryd"
     ]
-    for service in services:
-        s = host.service(service)
-        assert s.is_running
-        assert s.is_enabled
+    if present:
+        for service in present:
+            s = Service(service)
+            assert s.is_running
+            assert s.is_enabled
