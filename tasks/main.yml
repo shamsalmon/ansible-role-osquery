@@ -72,6 +72,11 @@
     mode: 0644
   notify: restart osquery
 
+- name: copy packs
+  copy:
+    src: packs/
+    dest: /etc/osquery/packs
+
 - name: configure systemctl for osquery
   lineinfile:
     path: /etc/sysctl.conf
