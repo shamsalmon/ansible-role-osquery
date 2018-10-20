@@ -1,5 +1,5 @@
 ---
-osquery_config_test:
+osquery_config:
   options:
     logger_snapshot_event_type: 'true'
     schedule_splay_percent: 10

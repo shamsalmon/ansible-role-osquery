@@ -64,10 +64,6 @@
   debug:
     var: osquery_config
 
-- name: debug again
-  debug:
-    var: osquery_config_test
-
 - name: copy config file
   copy:
     dest: "{{ osquery.config_include_dir }}/osquery.conf"
