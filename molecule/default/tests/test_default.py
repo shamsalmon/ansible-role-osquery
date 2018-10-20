@@ -1,16 +1,14 @@
-import os
+import pytest
 import testinfra.utils.ansible_runner
+import os
 
 testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
-def test_service(Service):
-    present = [
-        "osqueryd"
-    ]
-    if present:
-        for service in present:
-            s = Service(service)
-            assert s.is_running
-            assert s.is_enabled
+def test_hosts_file(host):
+    f = host.file('/etc/hosts')
+
+    assert f.exists
+    assert f.user == 'root'
+    assert f.group == 'root'
