@@ -1,6 +1,6 @@
 ---
 - name: restart osquery
   service:
-    name: "{{ osquery_combined.daemon }}"
+    name: "{{ osquery.daemon }}"
     state: restarted
     sleep: 5

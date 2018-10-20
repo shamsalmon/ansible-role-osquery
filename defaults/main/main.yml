@@ -1,11 +1,5 @@
 ---
-# https://osquery.readthedocs.io/en/stable/deployment/configuration/
-
-# Overload variables using the dict named "osquery"
 osquery:
-  version: "latest"
-  
-osquery_defaults:
   daemon: "osqueryd"
   version: "latest"
   config_include_dir: "/etc/osquery"
@@ -23,3 +17,10 @@ osquery_defaults:
   events_max: 100000
   enable_monitor: "true"
   host_identifier: "hostname"
+  systemctl_configs:
+    - name: fs.inotify.max_user_watches
+      value: 16384
+    - name: fs.inotify.max_user_instances
+      value: 256
+    - name: fs.inotify.max_queued_events
+      value: 32768
