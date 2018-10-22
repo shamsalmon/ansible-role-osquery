@@ -3,6 +3,7 @@ osquery_config:
   options:
     logger_snapshot_event_type: 'true'
     schedule_splay_percent: 10
+    enable_monitor: 'true'
   platform: linux
   schedule:
     process_events:
