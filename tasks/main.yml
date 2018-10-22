@@ -66,7 +66,7 @@
 - name: copy config file
   copy:
     dest: "{{ osquery.config_include_dir }}/osquery.conf"
-    content: "{{ osquery_config | to_json }}"
+    content: "{{ osquery_config | to_nice_json }}"
     owner: root
     group: root
     mode: 0644
