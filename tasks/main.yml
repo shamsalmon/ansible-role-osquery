@@ -72,6 +72,15 @@
     mode: 0644
   notify: restart osquery
 
+- name: copy flags
+  copy:
+    src: osquery.flags
+    dest: /etc/osquery/osquery.flags
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart osquery
+
 - name: copy packs
   copy:
     src: packs/
