@@ -52,6 +52,7 @@
     name: auditd
     state: stopped
     enabled: false
+  ignore_errors: true
   when: osquery.disable_auditd == true
 
 - name: install osquery latest
