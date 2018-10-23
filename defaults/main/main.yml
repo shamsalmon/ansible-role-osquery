@@ -3,20 +3,6 @@ osquery:
   daemon: "osqueryd"
   version: "latest"
   config_include_dir: "/etc/osquery"
-  config_plugin: "filesystem"
-  logger_plugin: "filesystem"
-  logger_path: "/var/log/osquery"
-  disable_logging: "false"
-  schedule_splay_percent: 10
-  pidfile: "/var/osquery/osquery.pidfile"
-  events_expiry: 3600
-  database_path: "/var/osquery/osquery.db"
-  disable_tables: ""
-  verbose: "true"
-  read_max: 100000
-  events_max: 100000
-  enable_monitor: "true"
-  host_identifier: "hostname"
   systemctl_configs:
     - name: fs.inotify.max_user_watches
       value: 16384
@@ -24,3 +10,4 @@ osquery:
       value: 256
     - name: fs.inotify.max_queued_events
       value: 32768
+  disable_auditd: true

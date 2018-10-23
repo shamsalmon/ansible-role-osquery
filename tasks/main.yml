@@ -47,6 +47,13 @@
   become: true
   when: ansible_os_family == 'RedHat'
 
+- name: disable auditd
+  service:
+    name: auditd
+    state: stopped
+    enabled: false
+  when: osquery.disable_auditd == true
+
 - name: install osquery latest
   yum:
     name: osquery
